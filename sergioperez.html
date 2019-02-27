@@ -1,0 +1,379 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+        <title>Sergio Perez</title>
+		<script src="jquery-3.3.1.min.js"></script>
+        <script src="meny2.js"></script>
+	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <style>
+body{
+    margin: 0px;
+    padding: 0px;
+    background-image:url("Bilder/ForceIndia_OW.jpg");
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+	a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+.menuIcon{
+    width: 30px;
+    height: 20px;
+    padding: 5px 0 0 0;
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 9999;
+}
+.open .line1,.line2{
+    width: 30px;
+    height: 2px;
+    display: block;
+    background-color: #CA2052;
+    position: relative;
+}
+.open .line2{
+    width: 15px;
+    margin-top: 10px;
+    right: -15px;
+}
+@-webkit-keyframes a1{
+    from{right: 50px;}
+    to{right: 0px;}
+}
+.menuIcon:hover .open .line1{
+    animation: a1 .6s;
+}
+@-webkit-keyframes a2{
+    from{
+        right: -30px;
+    }
+    to{
+        right: -15px;
+    }
+}
+.menuIcon:hover .open .line2{
+    animation: a2 .6s;
+}
+.close{
+    margin-top: 10px;
+    display: none;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+		.close .line3,.line4{
+    width: 30px;
+    height: 2px;
+    display: block;
+    background-color: white;
+    position: relative;
+    margin-top: -5px;
+    transform: rotate(45deg);
+}
+.close .line4{
+    margin-top: -2px;
+    transform: rotate(-45deg);
+}
+@-webkit-keyframes a3{
+    from{
+        width: 0px;
+    }
+    to{
+        width: 30px;
+    }
+}
+.menuIcon:hover .close .line3{
+    animation: a3 .6s;
+}
+.menuIcon:hover .close .line4{
+    animation: a3 .6s;
+}
+.main{
+    width: 100%;
+    height: 100vh;
+    background-color: #09131B;
+    position: fixed;
+    top:0px;
+    left: 0px;
+    z-index: 999;
+    display: none;
+}
+.menu{
+    width: 300px;
+    position: relative;
+    top:50%;
+    left: 30%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 999;
+}
+.menuItem{
+    display: block;
+    font-family: monospace;
+    font-size: 50px;
+    color:white;
+    font-weight: 600;
+    letter-spacing: 10px;
+    text-align: center;
+    margin-bottom: 30px;
+    position: relative;
+    cursor: pointer;
+}
+.menuItem:before,.menuItem:after{
+    content: attr(data);
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    background-color: #09131B;
+    color: white;
+    overflow: hidden;
+}
+.menuItem:hover:before{
+    left: 8px;
+    animation: effect 3s infinite linear;
+}
+.menuItem:hover:after{
+    left: 4px;
+    animation: effect 2s infinite linear;
+}
+@-webkit-keyframes effect{
+    0%{clip:rect(55px,9999px,56px,0);}
+    5%{clip:rect(47px,9999px,30px,0);}
+    10%{clip:rect(33px,9999px,36px,0);}
+    15%{clip:rect(35px,9999px,9px,0);}
+    20%{clip:rect(63px,9999px,59px,0);}
+    25%{clip:rect(96px,9999px,98px,0);}
+    30%{clip:rect(48px,9999px,77px,0);}
+    35%{clip:rect(50px,9999px,34px,0);}
+    40%{clip:rect(60px,9999px,72px,0);}
+    45%{clip:rect(10px,9999px,81px,0);}
+    50%{clip:rect(2px,9999px,60px,0);}
+    55%{clip:rect(23px,9999px,89px,0);}
+    60%{clip:rect(76px,9999px,91px,0);}
+    65%{clip:rect(62px,9999px,30px,0);}
+    70%{clip:rect(60px,9999px,73px,0);}
+    75%{clip:rect(60px,9999px,87px,0);}
+    80%{clip:rect(2px,9999px,14px,0);}
+    85%{clip:rect(28px,9999px,87px,0);}
+    90%{clip:rect(73px,9999px,50px,0);}
+    95%{clip:rect(79px,9999px,70px,0);}
+    100%{clip:rect(17px,9999px,79px,0);}
+}
+#vid{
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    z-index: 99;
+}
+	
+
+.container {
+  padding: 0px;
+  opacity: 0.95;
+}
+
+.row:after {
+  content: "";
+  display: table;
+
+  clear: both
+}
+
+
+.column-66 {
+  float: left;
+  width: 100%;
+  padding: 0px;
+}
+
+.column-33 {
+  float: left;
+  width: 100%;
+  padding: 0px;
+}
+
+.large-font {
+  font-size: 48px;
+  font-family: monospace;
+}
+
+.xlarge-font {
+  font-size: 64px;
+  color:#CA2052;
+  font-family: monospace;
+
+}
+
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+margin-bottom: 20px;
+	margin-left: 20px;
+  cursor: pointer;
+  background-color: #4CAF50;
+
+}
+
+img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
+  }
+  img {
+    margin: auto;
+  }
+}	
+	
+	
+	a:link {
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+a:active {
+	text-decoration: none;
+}
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #09131B;
+  z-index:998;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #CA2052;
+  width: 0%;
+  position:fixed;
+  z-index:998;
+}         
+    </style>
+   <script>
+
+window.onscroll = function() {myFunction()};
+
+function myFunction() {
+  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+  var scrolled = (winScroll / height) * 100;
+  document.getElementById("myBar").style.width = scrolled + "%";
+}
+</script>  
+
+    
+    
+    
+<meta charset="utf-8">
+    </head>
+    <body>
+    <div class="progress-container">
+    <div class="progress-bar" id="myBar"></div>
+  </div>  
+  
+        <div class="menuIcon">
+            <div class="open">
+                <span class="line1"></span>
+                <span class="line2"></span>
+            </div>
+            
+            <div class="close">
+                <span class="line3"></span>
+                <span class="line4"></span>
+            </div>
+        </div>
+        
+        <div class="main">
+            <div class="menu">
+                <a href="index.html"><span class="menuItem" data="HOME">HOME</span></a>
+                <a href="Teams2.html"><span class="menuItem" data="TEAMS">TEAMS</span></a>
+				<a href="Teams2.html"><span class="menuItem" data="DRIVERS">DRIVERS</span></a>
+				<a href="race.html"><span class="menuItem" data="RACES">RACES</span></a>
+            </div>
+            
+            <video src="formulaoneloop.mp4" type="video/mp4" height="100%" width="100%"  id="vid" autoplay loop></video>
+        </div>
+   
+    
+    
+
+
+
+
+<div class="container" style="background-color:#f1f1f1">
+  <a href="index.html"><h1 style= "text-align:center;  z-index: 99; font-family:monospace; color: #CA2052;top: 0px;">FORMULA 1</h1></a>
+	<div class="row">
+    <div class="column-33">
+	   
+		<img src="Bilder/perez.jpg" alt="App" width="335" height="471" class="center">
+	  </div>
+    <div class="column-66">
+      <h1 class="xlarge-font" style="text-align: center"><b>Sergio Perez</b></h1>
+      <h1 class="large-font" style="color:MediumSeaGreen; text-align: center"><b>Mexico</b></h1>
+      <p style= "color:black; font-family: monospace; font-size: 32px; text-align: center ">Podiums - 8</p>
+      <p style= "color:black; font-family: monospace; font-size: 32px; text-align: center ">Date of birth -	26/01/1990</p>
+		<p style= "color:black; font-family: monospace; font-size: 32px; text-align: center ">Place of birth - Guadalajara, Mexico</p>
+		<p style= "color:black; font-family: monospace; font-size: 32px; text-align: center ">Highest race finish -	2 (x2)</p>
+		<p style= "color:black; font-family: monospace; font-size: 32px; text-align: center">World Championships -	N/A</p>
+		<h1 style= "color:black; font-family: monospace; font-size: 32px; text-align: center">Biography</h1>
+		<p style= "color:black; font-family: monospace; font-size: 32px; text-align: center; margin-left: 20px; margin-right: 20px;">He’s the fighter with a gentle touch from the land of the Lucha Libre.</p>
+		<p style= "color:black; font-family: monospace; font-size: 32px; text-align: center; margin-left: 20px; margin-right: 20px;">Perez’s reputation in F1 has been built on opposite approaches to Grand Prix racing. On the one hand, he is a punchy combatant who wrestles his way through the pack and into the points. Never afraid to add a bit of spice to his on-track encounters, even his team mates don’t always escape the Mexican’s heat.
+
+</p>
+		<p style= "color:black; font-family: monospace; font-size: 32px; text-align: center; margin-left: 20px; margin-right: 20px;">Then on the other hand, Perez is a smooth operator, a master at managing tyres to eke out extra performance and give him the upper hand on strategy. A firm favourite on the grid after spells with Sauber and Force India, Perez has matured into an analytical racer and team leader. </p>
+		<p style= "color:black; font-family: monospace; font-size: 32px; text-align: center; margin-left: 20px; margin-right: 20px;">A proud countryman, the Guadalajara gunslinger has amassed more points than any other Mexican in the history of F1. But Perez is yet to match his hero Pedro Rodriguez and take the chequered flag in first. After a spell with McLaren and links to Ferrari, Perez’s hopes of driving for a winning team rest with Racing Point for 2019.</p>
+		<p style= "color:black; font-family: monospace; font-size: 32px; text-align: center; margin-left: 20px; margin-right: 20px;">Victories may not be assured. Perez working hard and racing with his heart are.</p>
+		
+		
+		
+		
+		
+      <a href="Teams2.html"><button class="button" style="background-color:#CA2052;">Select another driver</button></a>
+    </div>
+  </div>
+</div>
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+</html>
