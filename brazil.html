@@ -1,14 +1,15 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-        <script src="jquery-3.3.1.min.js"></script>
+        <title>Autódromo José Carlos Pace</title>
+		<script src="jquery-3.3.1.min.js"></script>
         <script src="meny2.js"></script>
 	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
     <style>
 body{
     margin: 0px;
     padding: 0px;
-    background-image:url(Bilder/wallpapersden.com_layers-of-light_3840x2160.jpg);
+    background-image:url("Bilder/brazil.jpg");
 	background-repeat:no-repeat;
 	background-size:cover;
 	background-position: center;
@@ -44,6 +45,11 @@ a:active {
     background-color: #CA2052;
     position: relative;
 }
+		.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+		}
 .open .line2{
     width: 15px;
     margin-top: 10px;
@@ -180,6 +186,7 @@ a:active {
 
 .container {
   padding: 64px;
+  opacity: 0.85;
 }
 
 .row:after {
@@ -190,12 +197,13 @@ a:active {
 
 .column-66 {
   float: left;
-  width: 66.66666%;
+  width: 100.66666%;
   padding: 0px;
 }
 
 .column-33 {
   float: left;
+
   width: 33.33333%;
   padding: 0px;
 }
@@ -203,14 +211,18 @@ a:active {
 .large-font {
   font-size: 48px;
   font-family: monospace;
+  text-shadow: 4px 4px #CA2052;
+  
 }
 
 .xlarge-font {
   font-size: 64px;
-  color:#CA2052;
+  color:yellow;
   font-family: monospace;
+	text-shadow: 4px 4px #CA2052;
 
 }
+
 
 .button {
   border: none;
@@ -255,6 +267,7 @@ a:active {
   width: 100%;
   height: 8px;
   background: #09131B;
+  z-index:998;
 }
 
 .progress-bar {
@@ -262,10 +275,10 @@ a:active {
   background: #CA2052;
   width: 0%;
   position:fixed;
-}            
+  z-index:998;
+}         
     </style>
-    
-<script>
+   <script>
 
 window.onscroll = function() {myFunction()};
 
@@ -275,7 +288,8 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
-</script>
+</script>  
+
     
     
     
@@ -285,12 +299,13 @@ function myFunction() {
     <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>  
+  
         <div class="menuIcon">
             <div class="open">
                 <span class="line1"></span>
                 <span class="line2"></span>
             </div>
-	
+            
             <div class="close">
                 <span class="line3"></span>
                 <span class="line4"></span>
@@ -299,10 +314,10 @@ function myFunction() {
         
         <div class="main">
             <div class="menu">
-                <span class="menuItem" data="HOME">HOME</span>
+                <a href="index.html"><span class="menuItem" data="HOME">HOME</span></a>
                 <a href="Teams2.html"><span class="menuItem" data="TEAMS">TEAMS</span></a>
-				<a href="Teams2.html"><span class="menuItem" data="DRIVERS">DRIVERS</span></a>
-                <a href="race.html"><span class="menuItem" data="RACES">RACES</span></a>
+                <span class="menuItem" data="DRIVERS">DRIVERS</span>
+				<a href="race.html"><span class="menuItem" data="RACES">RACES</span></a>
             </div>
             
             <video src="formulaoneloop.mp4" type="video/mp4" height="100%" width="100%"  id="vid" autoplay loop></video>
@@ -314,13 +329,10 @@ function myFunction() {
 <div class="container">
   <div class="row">
     <div class="column-66">
-      <h1 class="xlarge-font"><b>2018 FORMULA 1 CHAMPIONSHIP</b></h1>
-      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Want to know more about this season?</b></h1>
-      <p style="color:#FFFFFF; font-family: monospace; font-size:17px;">
-The 2018 FIA Formula One World Championship is the ongoing motor racing championship for Formula One cars and the 69th running of the Formula One World Championship. It is recognised by the governing body of international motorsport, the Fédération Internationale de l'Automobile (FIA), as the highest class of competition for open-wheel racing cars. Drivers and teams are competing in twenty-one Grands Prix for the World Drivers' and World Constructors' championship titles.
-
-</p>
-      <a href="index.html"><button class="button" style="background-color:MediumSeaGreen">Read More</button></a>
+      <h1 class="xlarge-font" style=" color: yellow">Autódromo José Carlos Pace</h1>
+      <h1 class="large-font" style="color: yellow;"><b>BRAZIL</b></h1>
+      <p style="color:yellow; font-family: monospace; font-size:17px; text-shadow: 2px 2px #CA2052">Building work began on what ended up being called the Autodromo Jose Carlos Pace – but what is more commonly referred to as Interlagos – all the way back in 1938. The track designers took their inspiration from three main circuits: Brooklands in the UK, Roosevelt Raceway in the USA and Montlhery in France.</p>
+      <a href="race.html"><button class="button" style="background-color:mediumseagreen; color: yellow;">Select Another Race</button></a>
     </div>
    
   </div>
@@ -331,12 +343,9 @@ The 2018 FIA Formula One World Championship is the ongoing motor racing champion
   <div class="row">
     
     <div class="column-66">
-      <h1 class="xlarge-font"><b>THE RACES OF FORMULA 1</b></h1>
-      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Want to know more?</b></h1>
-      <p style= "color:black; font-family: monospace; font-size: 17px; ">Formula 1 automobile racing has its roots in the European Grand Prix championships of the 1920s and 1930s, though the foundation of the modern Formula One began in 1946 with the Fédération Internationale de l'Automobile's (FIA) standardisation of rules, which was followed by a World Championship of Drivers in 1950.
-
-The sport's history parallels the evolution of its technical regulations. In addition to the world championship series, non-championship Formula One races were held for many years, the last held in 1983 due to the rising cost of competition. National championships existed in South Africa and the United Kingdom in the 1960s and 1970s.</p>
-      <a href="races.html"><button class="button" style="background-color:#CA2052">Read More</button></a>
+      <h1 class="xlarge-font"><b>Track Layout</b></h1>
+     <img src= "Bilder/braziltrack.png" alt ="Yas Marina Circuit" class="center">
+     
     </div>
   </div>
 </div>
@@ -345,10 +354,16 @@ The sport's history parallels the evolution of its technical regulations. In add
 <div class="container">
   <div class="row">
     <div class="column-66">
-      <h1 class="xlarge-font"><b>THE TEAMS OF FORMULA 1</b></h1>
-      <h1 class="large-font" style="color:MediumSeaGreen;"><b>Want to know more?</b></h1>
+      <h1 class="xlarge-font"><b>Facts About Autódromo José Carlos Pace</b></h1>
+     
       
-      <a href="Teams2.html"><button class="button" style="background-color:MediumSeaGreen">Read More</button></a>
+      <p style= "color:yellow; font-family: monospace; font-size: 32px; text-shadow: 2px 2px #CA2052;">Circuit Length - 
+4.309km</p>
+    <p style= "color:yellow; font-family: monospace; font-size: 32px; text-shadow: 2px 2px #CA2052;">Number of Laps - 
+71</p> 
+<p style= "color:yellow; font-family: monospace; font-size: 32px; text-shadow: 2px 2px #CA2052;">First Grand Prix - 
+1973</p> 
+<p style= "color:yellow; font-family: monospace; font-size: 32px; text-shadow: 2px 2px #CA2052;">Lap Record - null null (null)</p>
     </div>
     
   </div>

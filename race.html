@@ -1,31 +1,41 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-  <title>Races</title>      
-		<script src="jquery-3.3.1.min.js"></script>
+    <head>
+        <script src="jquery-3.3.1.min.js"></script>
         <script src="meny2.js"></script>
-	<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
-    <style>
+		<meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1">
+    <script>
+$(document).ready(function(){
+  
+  $("a").on('click', function(event) {
+
+   
+    if (this.hash !== "") {
+   
+      event.preventDefault();
+
+     
+      var hash = this.hash;
+
+     
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 800, function(){
+   
+        
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
+
+		<title>Races</title>
+		<style>
 body{
     margin: 0px;
     padding: 0px;
-    background-image:url(Bilder/HAASF1_OW.png);
-	background-repeat:no-repeat;
-	background-size:cover;
-	background-position: center;
-	background-attachment: fixed;
-}
-	a:link {
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
-a:active {
-	text-decoration: none;
+    background-color:#09131B;
 }
 .menuIcon{
     width: 30px;
@@ -37,6 +47,15 @@ a:active {
     overflow: hidden;
     cursor: pointer;
     z-index: 9999;
+}
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+ 
 }
 .open .line1,.line2{
     width: 30px;
@@ -178,43 +197,321 @@ a:active {
     z-index: 99;
 }
 	
-
-.container {
-  padding: 64px;
-  opacity: 0.85;
+#section1 {
+	height: 0px;
+	background-color: #09131B;
+	padding-left: 25px;
+}	
+	
+#section2 {
+  height: 600px;
+  background-image: url("Bilder/australia.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+  }
+#section3 {
+  height: 600px;
+  width: auto;
+  background-image:url(Bilder/bahrain.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
 }
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both
-}
-
-.column-66 {
-  float: left;
-  width: 66.66666%;
-  padding: 20px;
-}
-
-.column-33 {
-  float: left;
-  width: 33.33333%;
-  padding: 20px;
-}
-
-.large-font {
-  font-size: 48px;
-  font-family: monospace;
-}
-
-.xlarge-font {
-  font-size: 64px;
-  color:#CA2052;
-  font-family: monospace;
-
+#section4 {
+  height: 600px;
+  background-image:url(Bilder/china.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
 }
 
 
+
+#section5 {
+  height: 600px;
+  background-image:url(Bilder/azerbaijan.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+  
+}
+#section6 {
+  height: 600px;
+  background-image:url("Bilder/spain.jpg");
+  background-repeat:no-repeat;
+  background-size:cover; 
+	background-position: center;
+	background-attachment: fixed;
+   
+   }
+#section7 {
+  height: 600px;
+  background-image:url(Bilder/monaco.jpg);
+  background-repeat:no-repeat;
+  background-size:cover; 
+	background-position: center;
+	background-attachment: fixed;
+}
+#section8 {
+  height: 600px;
+  background-image:url(Bilder/canada.jpg);
+  background-repeat:no-repeat;
+  background-size:cover; 
+	background-position: center;
+	background-attachment: fixed;
+	
+
+}
+
+#section9 {
+  height: 600px;
+  background-image:url(Bilder/france.jpg);
+  background-repeat:no-repeat;
+  background-size:cover; 
+	background-position: center;
+	background-attachment: fixed;
+}
+#section10 {
+  height: 600px;
+  background-image:url("Bilder/austria.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+    background-position: center;
+	background-attachment: fixed;
+			}
+
+#section11 {
+  height: 600px;
+  background-image:url(Bilder/gb.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+			#section12 {
+  height: 600px;
+  background-image:url("Bilder/germany.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+			#section13 {
+  height: 600px;
+  background-image:url(Bilder/hungary.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+			#section14 {
+  height: 600px;
+  background-image:url(Bilder/belgium.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+			#section15 {
+  height: 600px;
+  background-image:url(Bilder/italy.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+			#section16 {
+  height: 600px;
+  background-image:url(Bilder/singapore.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+			#section17 {
+  height: 600px;
+  background-image:url(Bilder/russia.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+			#section18 {
+  height: 600px;
+  background-image:url(Bilder/japan.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+			#section19 {
+  height: 600px;
+  background-image:url(Bilder/mexico.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+			#section20 {
+  height: 600px;
+  background-image:url(Bilder/usa.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+			
+#section21 {
+  height: 600px;
+  background-image:url("Bilder/brazil.jpg");
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+			#section22 {
+  height: 600px;
+  background-image:url(Bilder/arabemirates.jpg);
+  background-repeat:no-repeat;
+  background-size:cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+				
+	
+	
+	
+	
+	#apDiv1 {
+	position:absolute;
+	width:200px;
+	height:115px;
+	z-index:1000;
+	left: 378px;
+	top: 155px;
+}
+        #apDiv2 {
+	position:absolute;
+	width:206px;
+	height:61px;
+	left: 455px;
+	top: 99px;
+	
+}
+        #apDiv3 {
+	position:absolute;
+	width:206px;
+	height:61px;
+	left: 662px;
+	top: 99px;
+	
+}
+        #apDiv4 {
+	position:absolute;
+	width:206px;
+	height:61px;
+	left: 661px;
+	top: 161px;
+	
+}
+        #apDiv5 {
+	position:absolute;
+	width:206px;
+	height:61px;
+	left: 454px;
+	top: 161px;
+	
+}
+        #apDiv6 {
+	position:absolute;
+	width:206px;
+	height:61px;
+	left: 868px;
+	top: 161px;
+	
+}
+        #apDiv7 {
+	position:absolute;
+	width:206px;
+	height:61px;
+	left: 1284px;
+	top: 99px;
+	
+}
+        #apDiv8 {
+	position:absolute;
+	width:206px;
+	height:61px;
+	left: 1284px;
+	top: 161px;
+	
+}
+        #apDiv9 {
+	position:absolute;
+	width:206px;
+	height:61px;
+	left: 870px;
+	top: 99px;
+	
+}
+        #apDiv10 {
+	position:absolute;
+	width:206px;
+	height:61px;
+	left: 1077px;
+	top: 99px;
+	
+}
+        #apDiv11 {
+	position:absolute;
+	width:206px;
+	height:61px;
+	left: 1076px;
+	top: 161px;
+	
+}
+        a:link {
+	text-decoration: none;
+	color: #FFF;
+}
+a:visited {
+	text-decoration: none;
+	color: #FFF;
+}
+a:hover {
+	text-decoration: none;
+	color: #FFF;
+	
+}
+a:active {
+	text-decoration: none;
+	color: #FFF;
+}
+        
+.progress-container {
+  width: 100%;
+  height: 8px;
+  background: #09131B;
+}
+
+.progress-bar {
+  height: 8px;
+  background: #CA2052;
+  width: 0%;
+  position:fixed;
+}        
+        
+NAV {
+	align-content: center;
+			
+			}		
+			
+		
 .button {
   border: none;
 
@@ -223,54 +520,29 @@ a:active {
   font-size: 16px;
   cursor: pointer;
   background-color: #4CAF50;
-}
-
-img {
-  display: block;
-  height: auto;
-  max-width: 100%;
-}
-
-@media screen and (max-width: 1000px) {
-  .column-66,
-  .column-33 {
-    width: 100%;
-    text-align: center;
-  }
-  img {
-    margin: auto;
-  }
-}	
-	
-	
-	a:link {
-	text-decoration: none;
-}
-a:visited {
-	text-decoration: none;
-}
-a:hover {
-	text-decoration: none;
-}
-a:active {
-	text-decoration: none;
-}
-.progress-container {
-  width: 100%;
-  height: 8px;
-  background: #09131B;
-  z-index:998;
-}
-
-.progress-bar {
-  height: 8px;
-  background: #CA2052;
-  width: 0%;
-  position:fixed;
-  z-index:998;
-}            
-    </style>
- <script>
+  
+  
+}		
+			.divider {
+				
+				display:inline-block;
+				width: 3px;
+				height: 20px;
+				padding-top: 15px;
+				
+			}	
+		
+		
+	#section88 {
+	height: 0px;
+	background-color: #09131B;
+	padding-left: 25px;	
+		
+		
+		
+		</style>
+    
+  <script>
 
 window.onscroll = function() {myFunction()};
 
@@ -280,21 +552,19 @@ function myFunction() {
   var scrolled = (winScroll / height) * 100;
   document.getElementById("myBar").style.width = scrolled + "%";
 }
-</script>   
-
+</script>
+  
     
     
     
-<meta charset="utf-8">
+    <meta charset="utf-8">
     </head>
+    
     <body>
-         <div class="progress-container">
+    <div class="progress-container">
     <div class="progress-bar" id="myBar"></div>
   </div>  
-  
-        
-        
-        
+    
         
         
         <div class="menuIcon">
@@ -312,73 +582,164 @@ function myFunction() {
         <div class="main">
             <div class="menu">
                 <a href="index.html"><span class="menuItem" data="HOME">HOME</span></a>
-                <a href="Teams2.html"><span class="menuItem" data="TEAMS">TEAMS</span></a>
-                <span class="menuItem" data="DRIVERS">DRIVERS</span>
-				<a href="race.html"><span class="menuItem" data="RACES">RACES</span></a>
+                <a href="teams2.html"><span class="menuItem" data="TEAMS">TEAMS</span></a>
+				<a href="Teams2.html"><span class="menuItem" data="DRIVERS">DRIVERS</span></a>
+               <a href="race.html"><span class="menuItem" data="RACES">RACES</span></a>
             </div>
             
             <video src="formulaoneloop.mp4" type="video/mp4" height="100%" width="100%"  id="vid" autoplay loop></video>
         </div>
-    <a href="index.html"><h1 style= "text-align:center;  z-index: 99; font-family:monospace; color: #CA2052; top: 22px;"> FORMULA 1</h1></a>
-    
-    
-
-<div class="container">
-  <div class="row">
-    <div class="column-66">
-      <h1 class="xlarge-font">The Teams of formula 1</h1>
-      <h1 class="large-font" style="color:MediumSeaGreen;"><b>FAct</b></h1>
-      <p style="color:#FFFFFF; font-family: monospace; font-size:17px;">FACTS</p>
-      <a href="teams2.html"><button class="button">Mercedes AMG Petronas F1</button></a>
-		<a href="teams2.html"><button class="button">MERCEDES</button></a>
-		<a href="teams2.html"><button class="button">Select another team</button></a>
-		<a href="teams2.html"><button class="button">Select another team</button></a>
-		<a href="teams2.html"><button class="button">Select another team</button></a>
-		<a href="teams2.html"><button class="button">Select another team</button></a>
-		<a href="teams2.html"><button class="button">Select another team</button></a>
-		<a href="teams2.html"><button class="button">Select another team</button></a>
-		<a href="teams2.html"><button class="button">Select another team</button></a>
-		<a href="teams2.html"><button class="button">Select another team</button></a>
+		<div class="main2" id="section88"></div>
+    <a href="index.html"><h1 style= "text-align:center; z-index: 99; color:#CA2052; font-family:monospace;" >FORMULA 1</h1></a>
 		
-	
+		<div class="NAV" align="center">
+		
+	<a href="#section2"><button class="button">Australia</button></a><div class="divider"></div>
+	<a href="#section3"><button class="button">Bahrain</button></a><div class="divider"></div>
+		<a href="#section4"><button class="button">China</button></a><div class="divider"></div>
+		<a href="#section5"><button class="button">Azerbaijan</button></a><div class="divider"></div>
+		<a href="#section6"><button class="button">Spain</button></a><div class="divider"></div>
+		<h1></h1>
+	<a href="#section7"><button class="button">Monaco</button></a><div class="divider"></div>
+		<a href="#section8"><button class="button">Canada</button></a><div class="divider"></div>
+		<a href="#section9"><button class="button">France</button></a><div class="divider"></div>
+		<a href="#section10"><button class="button">Austria</button></a><div class="divider"></div>
+		<a href="#section11"><button class="button">Great Britain</button></a> <div class="divider"></div>
+			<a href="#section12"><button class="button">Germany</button></a> <div class="divider"></div>
+			<a href="#section13"><button class="button">Hungary</button></a> <div class="divider"></div>
+			<a href="#section14"><button class="button">Belgium</button></a> <div class="divider"></div>
+			<a href="#section15"><button class="button">Italy</button></a> <div class="divider"></div>
+			<a href="#section16"><button class="button">Singapore</button></a> <div class="divider"></div>
+			<a href="#section17"><button class="button">Russia</button></a> <div class="divider"></div>
+			<a href="#section18"><button class="button">Japan</button></a> <div class="divider"></div>
+			<a href="#section19"><button class="button">Mexico</button></a> <div class="divider"></div>
+			<a href="#section20"><button class="button">United States</button></a> <div class="divider"></div>
+			<a href="#section21"><button class="button">Brazil</button></a> <div class="divider"></div>
+			<a href="#section22"><button class="button">United Arab Emirates</button></a> <div class="divider"></div>
     </div>
+<div class="main2" id="section1">
    
-  </div>
+
+  <h1></h1>
+  
 </div>
+<div class="main2" id="section2">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 ROLEX AUSTRALIAN GRAND PRIX 2019</h2>
+  
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+<a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+		
+		</div>
+
+<div class="main2" id="section3">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 GULF AIR BAHRAIN GRAND PRIX 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+ <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+	
 
 
-<div class="container" style="background-color:#f1f1f1">
-  <div class="row">
-    
-    <div class="column-66">
-      <h1 class="xlarge-font"><b>DRIVER LINEUP</b></h1>
-      <h1 class="large-font" style="color:MediumSeaGreen;"><b>DRIVERS OF THE 2018 SEASON</b></h1>
-      <p style= "color:black; font-family: monospace; font-size: 32px; ">ROMAIN GROSJEAN - FRANCE</p>
-      <p style= "color:black; font-family: monospace; font-size: 32px; ">KEVIN MAGNUSSEN - DENMARK</p>
-      <a href="history.html"><button class="button" style="background-color:#CA2052">Read More about drivers</button></a>
-    </div>
-  </div>
+
+
+
+
 </div>
+		<div class="main2" id="section4">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 HEINEKEN CHINESE GRAND PRIX 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+ <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+		</div>
+<div class="main2" id="section5">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 AZERBAIJAN GRAND PRIX 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
 
-
-<div class="container">
-  <div class="row">
-    <div class="column-66">
-      <h1 class="xlarge-font"><b>FACTS ABOUT HAAS F1 TEAM<span style="font-family: monospace; color: #CA2052"> </span></b></h1>
-     
-      
-      <p style= "color:white; font-family: monospace; font-size: 32px; ">Full Team Name - 
-Haas F1 Team</p>
-    <p style= "color:white; font-family: monospace; font-size: 32px; ">Power Unit - 
-Ferrari</p> 
-<p style= "color:white; font-family: monospace; font-size: 32px; ">World Championships - 
-N/A</p> 
-<p style= "color:white; font-family: monospace; font-size: 32px; ">Team Chief - Guenther Steiner</p>
-    </div>
-    
-  </div>
+		</div>
+<div class="main2" id="section6">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 EMIRATES GRAN PREMIO DE ESPAÑA 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
 </div>
-
+<div class="main2" id="section7">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 GRAND PRIX DE MONACO 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+<div class="main2" id="section8">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 PIRELLI GRAND PRIX DU CANADA 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+<div class="main2" id="section9">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 GRAND PRIX DE FRANCE 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+	
+</div>
+<div class="main2" id="section10">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 MYWORLD GROSSER PREIS VON ÖSTERREICH 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+<div class="main2" id="section11">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 ROLEX BRITISH GRAND PRIX 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+ <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+		<div class="main2" id="section12">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 MERCEDES-BENZ GROSSER PREIS VON DEUTSCHLAND 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+		<div class="main2" id="section13">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 MAGYAR NAGYDÍJ 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+<div class="main2" id="section14">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 JOHNNIE WALKER BELGIAN GRAND PRIX 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+		<div class="main2" id="section15">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 GRAN PREMIO HEINEKEN D'ITALIA 2019</h2>
+ <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+		<div class="main2" id="section16">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 SINGAPORE AIRLINES SINGAPORE GRAND PRIX 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+ <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+<div class="main2" id="section17">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 VTB RUSSIAN GRAND PRIX 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+		<div class="main2" id="section18">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 JAPANESE GRAND PRIX 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+ <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+		<div class="main2" id="section19">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 GRAN PREMIO DE MÉXICO 2019</h2>
+ <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+		<div class="main2" id="section20">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 UNITED STATES GRAND PRIX 2019</h2>
+ <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="amgpetronas.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+		<div class="main2" id="section21">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 GRANDE PRÊMIO DO BRASIL 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="brazil.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
+		<div class="main2" id="section22">
+  <h2 style="color:yellow; font-family: monospace; font-size: 38px; text-shadow: 4px 4px #CA2052; text-align: center;">FORMULA 1 ETIHAD AIRWAYS ABU DHABI GRAND PRIX 2019</h2>
+  <a href="#section88" class="linktext" style="color:yellow; font-family: monospace; font-size:17px; margin-left: 10px; text-shadow: 2px 2px #CA2052">Change Race</a>
+  <a href="unitedarabemirates.html"><button class="button" style="background-color:#CA2052; text-align:center; margin-left: 10px; color: yellow;">Read More</button></a>
+</div>
     
     
     
